@@ -20,6 +20,7 @@ get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	    <div class="page-banner" style="background:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>')">
+            
             <div class="overlay container">
                 <h1><?php the_title(); ?></h1>
                 <hr class="dotted">
