@@ -1,0 +1,25 @@
+/* 
+==========================================================================
+Font Icons
+========================================================================== 
+*/
+
+@font-face {
+    font-family: 'entypo';
+    src: url('../icons/entypo.eot');
+    src: url('../icons/entypo.eot?#iefix') format('embedded-opentype'),
+         url('../icons/entypo.woff') format('woff'),
+         url('../icons/entypo.ttf') format('truetype');
+}
+
+
+[class*="icon-"]:before {
+	height: inherit;
+  	font-family: 'entypo', sans-serif;
+  	font-style: normal;
+  	color: inherit;
+}
+
+.icon-chevron-thin-right:before { content: "\E766"}
+.icon-chevron-thin-left:before { content: "\E765"}
+.icon-circled-cross:before { content: "\E2716"}

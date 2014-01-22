@@ -1,0 +1,78 @@
+/* 
+==========================================================================
+Main Level Page Banners
+========================================================================== 
+*/
+
+.page-banner {
+	position: relative;
+	background-color: $charcoal;
+	background-position: center center;
+	background-size: cover;
+	
+	.overlay {
+		padding-top: 5%;
+		padding-bottom: 6%;
+		background-color: rgba($charcoal, 0.4);
+
+		@media #{$medium-up}{ padding-right: 15%; }
+		@media #{$portrait-up}{ padding-right: 20%; }
+		@media #{$standard-up}{ padding-right: 25%; }
+		@media #{$landscape-up}{ padding-right: 30%; }
+		@media #{$large-up}{ padding-right: 35%; }
+	}
+
+	h1, h3 {
+		color: white;
+		margin-bottom: 0;
+	}
+
+	.contact-btn {
+		margin-top: 2em;
+	}
+
+	.dotted {
+		margin-top: 0;
+	}
+}
+
+.overlay-sm {
+	@extend .overlay;
+	padding-top: 2%;
+	padding-bottom: 2%;	
+}
+
+/* 
+==========================================================================
+Basic Layout Headings
+========================================================================== 
+*/
+.intro {
+	@media #{$medium-up}{ padding-right: 15%; }
+	@media #{$portrait-up}{ padding-right: 20%; }
+	@media #{$standard-up}{ padding-right: 25%; }
+	@media #{$landscape-up}{ padding-right: 30%; }
+	@media #{$large-up}{ padding-right: 35%; }
+}
+
+/* 
+==========================================================================
+Banner Background Images: id on .page-banner
+========================================================================== 
+*/
+
+#page-banner-plantation { background-image: url('../img/banner-plantation.jpg'); }
+#page-banner-accommodations { background-image: url('../img/banner-accommodations.jpg'); }
+#page-banner-sporting { background-image: url('../img/banner-sporting.jpg'); }
+#page-banner-weddings { background-image: url('../img/banner-weddings.jpg'); }
+#page-banner-gatherings { background-image: url('../img/banner-gatherings.jpg'); }
+#page-banner-activities { background-image: url('../img/banner-activities.jpg'); }
+#page-banner-culinary { background-image: url('../img/banner-culinary.jpg'); }
+#page-banner-ownership { background-image: url('../img/banner-ownership.jpg'); }
+#page-banner-leisure { background-image: url('../img/banner-leisure.jpg'); }
+
+
+
+
+
+

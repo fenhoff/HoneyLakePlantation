@@ -1,0 +1,48 @@
+/* 
+==========================================================================
+Define Global Variables
+========================================================================== 
+*/
+
+// Colors
+
+$gray: #848484;
+$orange: #f26522;
+$charcoal: #252525;
+$green: #0e4b2f;
+$beige: #f6eddf;
+$light-gray: #fafafa;
+
+// Breakpoints
+
+$small-up: "only screen and (min-width : 480px)";
+$medium-up: "only screen and (min-width : 640px)";
+$portrait-up: "only screen and (min-width : 768px)";
+$standard-up: "only screen and (min-width : 960px)";
+$landscape-up: "only screen and (min-width : 1024px)";
+$large-up: "only screen and (min-width : 1280px)";
+$xlarge-up: "only screen and (min-width : 1440px)";
+
+/* 
+==========================================================================
+Import Components
+========================================================================== 
+*/
+@import "normalize";
+@import "h5boilerplate";
+@import "main";
+
+@import 
+"ui/mixins",
+"ui/typography",
+"ui/layout",
+"ui/header",
+"ui/footer",
+"ui/nav",
+"ui/subnav",
+"ui/home-menu",
+"ui/gallery",
+"ui/banners",
+"ui/form",
+"ui/icons",
+"ui/mediaqueries";

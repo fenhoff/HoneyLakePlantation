@@ -1,0 +1,67 @@
+		<?php 
+					foreach ( $adminsettings_query->posts as $post ) :
+
+					/*explode = string.split
+						//split on linefeed
+							//if it starts with 
+								slideshowid
+								//split on :
+								$thissetting = explode(":", setting)
+								exit for
+							//end if
+						//end for
+					*/
+						$settings = explode("\n", the_content());
+						//for each setting
+						foreach ($settings as $setting) :
+						  
+						  	//if it starts with 'slideshowid'
+						  	if(strpos($setting, "slideshowid") === 0)
+						  	{
+						  		//split on :
+								$thissetting = explode(":", setting);
+								echo do_shortcode("[metaslider id=$thissetting]");
+						  	}//end if
+									
+						endforeach;
+					endforeach;
+					
+					?>
+
+
+
+OLD HOME MENU
+
+
+<?php
+	$args = 
+    array(  'category_name' => 'HomePageItem',
+            'order'     => 'ASC',
+            'meta_key' => 'OrderInCalloutMenu',
+            'orderby'   => 'meta_value' //or 'meta_value_num'
+    );
+
+	$the_query = new WP_Query($args);
+
+?>
+
+<?php $options['first_id'] = '0'; ?>
+		<ul class="home-menu">
+			<?php while ( $the_query -> have_posts() ) :  $the_query -> the_post(); ?>
+					<li>
+						<a class="home-menu-item" onclick="homeMenu(<?php the_ID(); ?>); return false;" id="js-hm<?php the_ID(); ?>"
+							<?php if($options['first_id'] == '0') 
+									{ 
+									  $options['first_id'] = the_ID(); 
+									  echo ' class="active"'; 
+									} 
+							?>
+						>
+
+							<script type="text/javascript">oldItem = <?php echo $options['first_id']; ?>;</script> 
+							<h3 class="title"><?php the_title(); ?></h3>
+							<p class="desc"><?php the_content(); ?></p>
+						</a>
+					</li>
+			<?php endwhile; // end of the loop. ?>
+		</ul>	

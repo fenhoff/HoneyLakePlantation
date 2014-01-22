@@ -1,0 +1,53 @@
+/* 
+==========================================================================
+In Page Sub Navigation for main level pages
+========================================================================== 
+*/
+
+.subnav {
+	margin-bottom: 4em;
+}
+
+.subnav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	margin: 0.5em 0;
+
+	li {
+		display: inline-block;
+		border-right: solid 1px $gray + #555;
+		margin: 0;
+
+		&:last-of-type {
+			border-right: none;
+		}
+
+		a {
+			display: block;
+			padding: 1em 8%;			
+			text-align: center;
+
+			&:hover {
+				background-color: $orange;
+				
+				span { color: white; }
+			}
+		}
+
+		span {
+			display: block;
+		}
+		.subnav-page {
+			@extend h3;
+			margin: 0;
+		}
+
+		.subnav-desc {
+			@extend h6;
+			color: $charcoal;
+			margin: 0.5em 0 0.25em;
+		}
+	}
+}
