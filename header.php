@@ -49,23 +49,24 @@
 			<?php wp_nav_menu( array( 'menu_class' => '', 'container' => '', 'theme_location' => 'main-nav' ) ); ?>
 			</menu>
 			<div class="branding">
-		 	<a href="/" class="logo clearfix" title="Honey Lake Plantation Resort &amp; Spa">
-				<img src="<?php echo get_template_directory_uri() ; ?>/honeylake/assets/img/logo@2x.png" alt="<?php bloginfo( 'name' ); ?>" />
-			</a>
-			<h1 class="logo-name">
-				<span class="logo-main">Honey&nbsp;Lake&nbsp;Plantation</span>
-				<br>
-				<span class="logo-sub">Resort&nbsp;&&nbsp;Spa</span>
-			</h1>
-			<a href="http://www.orvis.com/endorsedgraphics" target="_blank">
-				<img class="orvis-logo-header" src="<?php echo get_template_directory_uri() ; ?>/honeylake/assets/img/orvis-endorsed.png" alt="Orvis Endorsed Wingshooting Lodge">
-			</a>
+			 	<a href="/" class="logo clearfix" title="Honey Lake Plantation Resort &amp; Spa">
+					<img src="<?php echo get_template_directory_uri() ; ?>/honeylake/assets/img/logo@2x.png" alt="<?php bloginfo( 'name' ); ?>" />
+				</a>
+				<h1 class="logo-name">
+					<span class="logo-main">Honey&nbsp;Lake&nbsp;Plantation</span>
+					<br>
+					<span class="logo-sub">Resort&nbsp;&&nbsp;Spa</span>
+				</h1>
+				<a href="http://www.orvis.com" class="orvis-logo-header"  target="_blank">
+					<img src="<?php echo get_template_directory_uri() ; ?>/honeylake/assets/img/orvis-endorsed.png" alt="Orvis Endorsed Wingshooting Lodge">
+				</a>
+			</div>
+			<a onclick="return false;" class="menu-btn">Menu</a>
+			<div class="main-nav">
+				<?php wp_nav_menu( array('menu' => 'pages', 'container' => 'nav', 
+										 'container_class' => 'nav-menu') ); ?>
+			</div>
 		</div>
-
 	</header>
-	<div class="container main-nav">
-		<a onclick="return false;" class="menu-btn">Menu</a>
-		<?php wp_nav_menu( array('menu' => 'pages', 'container' => 'nav', 
-								 'container_class' => 'nav-menu') ); ?>
-	</div>
+	
 
