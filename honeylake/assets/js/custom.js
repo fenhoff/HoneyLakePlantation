@@ -1,48 +1,18 @@
-// function jqUpdateSize(){
-//     // Get the dimensions of the viewport
-//     var wwidth = $(window).width();
-//     var wheight = $(window).height();
-
-//     $('#jqWidth').html(width);      // Display the width
-//     $('#jqHeight').html(wheight);
-//     $(".home-banner").height(wheight);
-//       // Display the height
-// };
-// $(document).ready(jqUpdateSize);    // When the page first loads
-// $(window).resize(jqUpdateSize);     // When the browser changes size
-
-
-// Enable Gallery popups
-$('.gallery-slides').magnificPopup({
-	  delegate: 'a', // child items selector, by clicking on it popup will open
-	  type: 'image',
-	  gallery: {
-	  	enabled: true,
-	  	preload: [1,3],
-	  	navigateByImgClick: true,
-	  	arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>' // markup of an arrow button
-
-	  }
-	  // other options
-	});
-
-// Enable home page slider
-$('.slider').glide();
-
-
-
-
+/*
+// ///////////////////////////////////////////////////////
 // Enable sticky nav
-$(document).ready(function() {  
-	var stickyNavTop = $('.main-nav').offset().top;  
+jQuery(document).ready(function() {  
+	alert ('foo');
+
+	var stickyNavTop = jQuery('.main-nav').offset().top;  
 
 	var stickyNav = function(){  
-		var scrollTop = $(window).scrollTop();  
+		var scrollTop = jQuery(window).scrollTop();  
 
 		if (scrollTop > stickyNavTop) {   
-			$('.main-nav').addClass('sticky');  
+			jQuery('.main-nav').addClass('sticky');  
 		} else {  
-			$('.main-nav').removeClass('sticky');   
+			jQuery('.main-nav').removeClass('sticky');   
 		}  
 	};  
 
@@ -52,7 +22,49 @@ $(document).ready(function() {
 		stickyNav();  
 	});  
 });  
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> da439c65090c16a295ba1f47b4e8bab743937ee2
+=======
+>>>>>>> da439c65090c16a295ba1f47b4e8bab743937ee2
+=======
+>>>>>>> da439c65090c16a295ba1f47b4e8bab743937ee2
 
+$(window).bind("load", function() { 
+       var footerHeight = 0,
+           footerTop = 0,
+           $footer = $(".footer");
+           
+       positionFooter();
+       
+       function positionFooter() {
+       
+                footerHeight = $footer.height();
+                footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
+       
+               if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+                   $footer.css({
+                        position: "absolute"
+                   }).animate({
+                        top: footerTop
+                   })
+               } else {
+                   $footer.css({
+                        position: "static"
+                   })
+               }
+               
+       }
+
+       $(window)
+               .scroll(positionFooter)
+               .resize(positionFooter)
+               
+});
 
 /* Enable sticky nav
 $(document).ready(function() {  
@@ -78,9 +90,11 @@ $(document).ready(function() {
 		stickyOverlayNav();  
 	});  
 }); 
+>>>>>>> da439c65090c16a295ba1f47b4e8bab743937ee2
 */
 
 
+// ///////////////////////////////////////////////////////
 // Smooth scroll
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -95,6 +109,39 @@ $(function() {
       }
     }
   });
+});
+
+// ///////////////////////////////////////////////////////
+// Video Overlay - Home page
+
+$(".video-btn").click(function() {
+	console.log("Video Hit");
+	$(".slideshow-module").toggleClass("showVideo");
+	$(".headline").fadeToggle("fast", function() {
+		$(".slider").fadeToggle("fast", function () {
+			$(".videoOverlay").fadeToggle("fast");	
+		});
+		
+	});
+});
+
+$(".video-close-btn").click(function() {
+	console.log("Close Video");
+	$(".slideshow-module").toggleClass("showVideo");
+	$(".videoOverlay").fadeToggle("fast", function () {
+		$(".headline").fadeToggle("fast", function () {
+			$(".slider").fadeToggle("fast");
+		});
+	});
+});
+
+
+// ///////////////////////////////////////////////////////
+// Mobile Menu
+
+$(".menu-btn").click(function() {
+	console.log("Menu Hit");
+	$("nav").slideToggle("fast");
 });
 
 
