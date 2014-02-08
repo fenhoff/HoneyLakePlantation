@@ -6,10 +6,10 @@ if ( !defined('ABSPATH')) exit;
 /**
  * Template for displaying content with a centered title
  *
-   Template Name: Honeylake Content Page
+   Template Name: Honeylake Sub Content Page
    MultiEdit: SubTitle,TagLine,LargeItalicText,RightSideList
  *
- * @file           page-honeylakecontent.php
+ * @file           page-honeylakesubcontent.php
  * @author         Andrew Fenhoff 
  * @copyright      2012-2013 Styledthemes.com
  * @license        license.txt
@@ -19,13 +19,11 @@ get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php include 'slider.php'; ?>
-<<<<<<< HEAD
-	    
-=======
-	       <?php wp_nav_menu( array('menu' => basename(get_permalink()), 'container' => 'div', 
-                         'container_class' => 'overlay-menu') ); ?>
-        </div>  
->>>>>>> 3f36ea91779f9f3ca0fefed8edc007c061de3718
+         <?php 
+              $parentSlug = basename(get_permalink($post->post_parent));
+              wp_nav_menu( array('menu' => $parentSlug, 'container' => 'div', 
+             'container_class' => 'overlay-menu') ); ?>
+        </div>
         <div class="container">
             <div class="main">
                 <h2><?php echo get('tag_line'); ?></h2>
@@ -33,14 +31,6 @@ get_header(); ?>
                 $myExcerpt = get('vimeo_url');
                 $tags = array("<p>", "</p>");
                 $myExcerpt = str_replace($tags, "", $myExcerpt);
-<<<<<<< HEAD
-                ?>
-                <div class="vid-container">
-                    <iframe src="//player.vimeo.com/video/<?php echo $myExcerpt; ?>?title=0&byline=0&portrait=0&color=ffffff"
-                       width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                   </div>
-=======
-
                 if($myExcerpt != "")
                 { 
                 ?>
@@ -50,8 +40,6 @@ get_header(); ?>
                        </iframe>
                    </div>
                 <?php } ?>
-
->>>>>>> 3f36ea91779f9f3ca0fefed8edc007c061de3718
                    <h4><?php echo get('italic_content'); ?></h4>
                    <p><?php the_content(); ?></p>
                    <a href="/contact" class="contact-btn">Contact Us</a>

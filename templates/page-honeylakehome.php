@@ -20,5 +20,13 @@ get_header();
 
 include 'slider.php';
 
+<<<<<<< HEAD
 get_footer(); ?>
+=======
+	wp_nav_menu( array('menu' => basename(get_permalink()), 'container' => 'div', 
+				 'container_class' => 'overlay-menu') ); ?>
+
+	</div>
+<?php get_footer(); ?>
+>>>>>>> 3f36ea91779f9f3ca0fefed8edc007c061de3718
 	
