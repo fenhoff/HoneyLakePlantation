@@ -6,10 +6,10 @@ if ( !defined('ABSPATH')) exit;
 /**
  * Template for displaying content with a centered title
  *
-   Template Name: Honeylake Content Page
+   Template Name: Honeylake Sub Content Page
    MultiEdit: SubTitle,TagLine,LargeItalicText,RightSideList
  *
- * @file           page-honeylakecontent.php
+ * @file           page-honeylakesubcontent.php
  * @author         Andrew Fenhoff 
  * @copyright      2012-2013 Styledthemes.com
  * @license        license.txt
@@ -19,9 +19,11 @@ get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php include 'slider.php'; ?>
-	       <?php wp_nav_menu( array('menu' => basename(get_permalink()), 'container' => 'div', 
-                         'container_class' => 'overlay-menu') ); ?>
-        </div>  
+         <?php 
+              $parentSlug = basename(get_permalink($post->post_parent));
+              wp_nav_menu( array('menu' => $parentSlug, 'container' => 'div', 
+             'container_class' => 'overlay-menu') ); ?>
+        </div>
         <div class="container">
             <div class="main">
                 <h2><?php echo get('tag_line'); ?></h2>

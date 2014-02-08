@@ -148,15 +148,15 @@ function bones_scripts_and_styles() {
 
 		//Honey Lake Specifics
 		wp_register_script( 'honeylake-js', get_stylesheet_directory_uri() . '/honeylake/assets/js/custom.js', array(), false, true );
-		wp_register_script( 'magnific-popup-js', get_stylesheet_directory_uri() . '/honeylake/assets/js/vendor/magnific-popup/jquery.magnific-popup.js', array(), false, true );
-		wp_register_script( 'GliderJS-js', get_stylesheet_directory_uri() . '/honeylake/assets/js/vendor/GliderJS/jquery.glide.js', array(), false, true );
+		//wp_register_script( 'magnific-popup-js', get_stylesheet_directory_uri() . '/honeylake/assets/js/vendor/magnific-popup/jquery.magnific-popup.js', array(), false, true );
+		//wp_register_script( 'GliderJS-js', get_stylesheet_directory_uri() . '/honeylake/assets/js/vendor/GliderJS/jquery.glide.js', array(), false, true );
 		
-		wp_register_style( 'normalize-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/css/normalize.css', array(), '', 'all' );
-		wp_register_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/css/main.css', array(), '', 'all' );
-		wp_register_style( 'styles-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/css/styles.css', array(), '', 'all' );
-		wp_register_style( 'gliderjs-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/js/vendor/GliderJS/gliderjs.min.css', array(), '', 'all' );
-		wp_register_style( 'magnific-popup-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/js/vendor/magnific-popup/magnific-popup.min.css', array(), '', 'all' );
-		wp_register_style( 'honeylake-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/css/honeylake.css', array(), '', 'all' );
+		//wp_register_style( 'normalize-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/css/normalize.css', array(), '', 'all' );
+		//wp_register_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/css/main.css', array(), '', 'all' );
+		wp_register_style( 'styles-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/css/styles.min.css', array(), '', 'all' );
+		//wp_register_style( 'gliderjs-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/js/vendor/GliderJS/gliderjs.min.css', array(), '', 'all' );
+		//wp_register_style( 'magnific-popup-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/js/vendor/magnific-popup/magnific-popup.min.css', array(), '', 'all' );
+		//wp_register_style( 'honeylake-stylesheet', get_stylesheet_directory_uri() . '/honeylake/assets/css/honeylake.css', array(), '', 'all' );
 		
 		// enqueue styles and scripts
 		//wp_enqueue_script( 'bones-modernizr' );
@@ -165,15 +165,15 @@ function bones_scripts_and_styles() {
 
 		//Honey Lake Spefics
 		wp_enqueue_script( 'honeylake-js' );
-		wp_enqueue_script( 'magnific-popup-js' );
-		wp_enqueue_script( 'GliderJS-js' );
+		//wp_enqueue_script( 'magnific-popup-js' );
+		//wp_enqueue_script( 'GliderJS-js' );
 		
-		wp_enqueue_style( 'normalize-stylesheet' );
-		wp_enqueue_style( 'main-stylesheet' );
-		wp_enqueue_style( 'gliderjs-stylesheet' );
-		wp_enqueue_style( 'magnific-popup-stylesheet' );
+		//wp_enqueue_style( 'normalize-stylesheet' );
+		//wp_enqueue_style( 'main-stylesheet' );
+		//wp_enqueue_style( 'gliderjs-stylesheet' );
+		//wp_enqueue_style( 'magnific-popup-stylesheet' );
 		wp_enqueue_style( 'styles-stylesheet' );
-		wp_enqueue_style( 'honeylake-stylesheet' );
+		//wp_enqueue_style( 'honeylake-stylesheet' );
 		
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 

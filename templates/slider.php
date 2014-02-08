@@ -24,9 +24,3 @@
 			<?php echo do_shortcode( $slidermarkup ); ?>
 		</div>
 	
-
-		<?php wp_nav_menu( array('menu' => basename(get_permalink()), 'container' => 'div', 
-						 'container_class' => 'overlay-menu') ); ?>
-
-	
-</div>

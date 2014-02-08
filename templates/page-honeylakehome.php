@@ -19,6 +19,8 @@ if ( !defined('ABSPATH')) exit;
 get_header(); 
 
 include 'slider.php';
-
+		<?php wp_nav_menu( array('menu' => basename(get_permalink()), 'container' => 'div', 
+						 'container_class' => 'overlay-menu') ); ?>
+	</div>
 get_footer(); ?>
 	
