@@ -33,16 +33,18 @@ $('.slider').glide();
 
 
 // Enable sticky nav
-$(document).ready(function() {  
-	var stickyNavTop = $('.main-nav').offset().top;  
+jQuery(document).ready(function() {  
+	alert ('foo');
+
+	var stickyNavTop = jQuery('.main-nav').offset().top;  
 
 	var stickyNav = function(){  
-		var scrollTop = $(window).scrollTop();  
+		var scrollTop = jQuery(window).scrollTop();  
 
 		if (scrollTop > stickyNavTop) {   
-			$('.main-nav').addClass('sticky');  
+			jQuery('.main-nav').addClass('sticky');  
 		} else {  
-			$('.main-nav').removeClass('sticky');   
+			jQuery('.main-nav').removeClass('sticky');   
 		}  
 	};  
 
@@ -53,6 +55,37 @@ $(document).ready(function() {
 	});  
 });  
 
+$(window).bind("load", function() { 
+       var footerHeight = 0,
+           footerTop = 0,
+           $footer = $(".footer");
+           
+       positionFooter();
+       
+       function positionFooter() {
+       
+                footerHeight = $footer.height();
+                footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
+       
+               if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+                   $footer.css({
+                        position: "absolute"
+                   }).animate({
+                        top: footerTop
+                   })
+               } else {
+                   $footer.css({
+                        position: "static"
+                   })
+               }
+               
+       }
+
+       $(window)
+               .scroll(positionFooter)
+               .resize(positionFooter)
+               
+});
 
 /* Enable sticky nav
 $(document).ready(function() {  
