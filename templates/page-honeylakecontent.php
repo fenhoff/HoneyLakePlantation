@@ -29,12 +29,17 @@ get_header(); ?>
                 $myExcerpt = get('vimeo_url');
                 $tags = array("<p>", "</p>");
                 $myExcerpt = str_replace($tags, "", $myExcerpt);
+
+                if($myExcerpt != "")
+                { 
                 ?>
-                <div class="vid-container">
-                    <iframe src="http://player.vimeo.com/video/<?php echo $myExcerpt; ?>?title=0&byline=0&portrait=0&color=ffffff"
-                       width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                   </iframe>
+                    <div class="vid-container">
+                        <iframe src="http://player.vimeo.com/video/<?php echo $myExcerpt; ?>?title=0&byline=0&portrait=0&color=ffffff"
+                           width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                       </iframe>
                    </div>
+                <?php } ?>
+
                    <h4><?php echo get('italic_content'); ?></h4>
                    <p><?php the_content(); ?></p>
                    <a href="/contact" class="contact-btn">Contact Us</a>
