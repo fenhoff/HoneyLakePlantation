@@ -630,11 +630,11 @@ Animate properties
 Misc
 ========================================================================== 
 */
-nav, .overlay-menu {
+nav, .overlay-menu ul {
   margin: 0;
   padding: 0;
   list-style: none; }
-  nav li, .overlay-menu li {
+  nav li, .overlay-menu ul li {
     margin: 0;
     padding: 0; }
 
@@ -1246,33 +1246,32 @@ Slideshow
 .headline h1 {
   margin-bottom: 0em; }
 
-.overlay-menu li {
+.overlay-menu ul li {
   border-bottom: solid 1px #848484; }
+  .overlay-menu ul li a {
+    color: #848484;
+    font-size: 1.5em;
+    display: block;
+    padding: 1em; }
+    .overlay-menu ul li a.current-menu-item, .overlay-menu ul li a:hover {
+      background-color: #f26522;
+      color: white; }
+    @media only screen and (min-width: 60em) {
+      .overlay-menu ul li a {
+        color: #fff;
+        font-weight: 300; } }
 @media only screen and (min-width: 60em) {
-  .overlay-menu {
+  .overlay-menu ul {
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     text-align: center; }
-    .overlay-menu li {
+    .overlay-menu ul li {
       display: inline-block;
       border-bottom: none; } }
 .overlay-menu.sticky {
   position: fixed; }
-
-.overlay-menu-item {
-  color: #848484;
-  font-size: 1.5em;
-  display: block;
-  padding: 1em; }
-  .overlay-menu-item.active, .overlay-menu-item:hover {
-    background-color: #f26522;
-    color: white; }
-  @media only screen and (min-width: 60em) {
-    .overlay-menu-item {
-      color: #fff;
-      font-weight: 300; } }
 
 .arrow-container {
   width: 10%; }

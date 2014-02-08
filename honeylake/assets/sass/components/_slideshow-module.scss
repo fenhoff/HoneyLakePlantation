@@ -45,22 +45,43 @@ position: relative;
 
 	// Menu Placement
 	.overlay-menu {
-		@extend %reset-list;
 
-		li {
-			border-bottom: solid 1px $gray;
-		}
-
-		@media #{$standard-up}{
-			position: absolute;
-			bottom: 0;
-			background-color: rgba(#000, 0.6);
-			width: 100%;
-			text-align: center;
+		ul {
+			@extend %reset-list;
 
 			li {
-				display: inline-block;
-				border-bottom: none;
+				border-bottom: solid 1px $gray;
+
+				a {
+					color: $gray;
+					font-size: 1.5em;
+					display: block;
+					padding: 1em;
+					
+					&.current-menu-item,
+					&:hover {
+					    background-color: #f26522;
+					    color: white;
+					}
+
+					@media #{$standard-up}{
+						color: #fff;
+						font-weight: 300;
+					}
+				}
+			}	
+
+			@media #{$standard-up}{
+				position: absolute;
+				bottom: 0;
+				background-color: rgba(#000, 0.6);
+				width: 100%;
+				text-align: center;
+
+				li {
+					display: inline-block;
+					border-bottom: none;
+				}
 			}
 		}
 
@@ -68,37 +89,6 @@ position: relative;
 			position: fixed;
 		}
 	}
-
-		.overlay-menu-item {
-			color: $gray;
-			font-size: 1.5em;
-			display: block;
-			padding: 1em;
-			
-			&.active,
-			&:hover {
-			    background-color: #f26522;
-			    color: white;
-			}
-
-			@media #{$standard-up}{
-				color: #fff;
-				font-weight: 300;
-			}
-		}
-
-
-
-	// Slider
-	.slider {
-
-		@media #{$standard-up}{
-			// position: absolute;	
-		}
-		
-	}
-
-
 
 	// Arrows
 	.arrow-container {
