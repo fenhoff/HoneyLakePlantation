@@ -4,26 +4,23 @@ Typography
 ========================================================================== 
 */
 
-
-/* Marion Font: Licensed */
-@import url("//hello.myfonts.net/count/293632");
+/* Cardo font: Google Web font */
+@import url(http://fonts.googleapis.com/css?family=Cardo);
 
 /* Source Sans font: Google Web font */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900,300italic,400italic,900italic);
 
-@font-face {
-    font-family: 'Marion-Regular';
-    src: url('webfonts/293632_0_0.eot');
-    src: url('webfonts/293632_0_0.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/293632_0_0.woff') format('woff'),
-         url('webfonts/293632_0_0.ttf') format('truetype');
-}
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
 }
 
-
+/* 
+==========================================================================
+Links
+========================================================================== 
+*/
 
 a {
     color: #f26522;
@@ -36,64 +33,59 @@ a:hover {
 }
 
 
+/* 
+==========================================================================
+Headings
+========================================================================== 
+*/
 
-h1, h2 {
-    font-family: 'Marion-Regular', serif;
+h1, h2, h3 {
+    font-family: 'Cardo', serif;
     font-weight: normal;
 }
 
-h1 { line-height: 4rem; }
-h2 { line-height: 2.65rem; }
-
-h3, h4, h5 {
-    line-height: 2rem;
-}
-
-h1 {
-    font-size: 2.25rem;
+h1 { 
+    font-size: 2.25em;
     line-height: 1.25em;
 }
 
-h2 {
-    font-size: 2.2rem;
+h2 { 
+    font-size: 2.2em;
 }
 
 h3 {
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 400;
+    font-size: 1.6em;
+    font-weight: 300;
+    line-height: 1.5em;
 }
 
 h4 {
-    font-size: 1.15rem;
+    font-size: 1.15em;
     font-weight: 700;
+}
+
+h5 {
+
 }
 
 
 h6 {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 900;
-    line-height: 1.5rem;
     margin: 1em 0 0.5em;
 }
 
 p {
-    // font-size: 1em;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 
-%btn {
-    border-radius: 3px;
-    background-color: $orange;
-    padding: 0.5em 1em;
-
-    &:hover {
-        color: white;
-        background-color: $orange - #222;
-    }
-}
-
-
+/* 
+==========================================================================
+Components
+========================================================================== 
+*/
 
 .contact-btn {
     @extend %btn;
@@ -126,11 +118,6 @@ p {
 .dotted-dark {
     @extend .dotted;
     color: $gray;
-}
-
-
-small {
-    opacity: 0.6;
 }
 
 

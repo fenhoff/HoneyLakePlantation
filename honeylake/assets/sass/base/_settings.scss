@@ -1,0 +1,28 @@
+/* 
+==========================================================================
+Define Global Variables
+========================================================================== 
+*/
+
+// Colors
+
+$gray: #848484;
+$orange: #f26522;
+$charcoal: #252525;
+$green: #0e4b2f;
+$beige: #f6eddf;
+$light-gray: #fafafa;
+
+
+
+// Breakpoints
+// @media #{$small-up}{ content }
+
+$small-up: "only screen and (min-width : 30em)"; // 640px
+$medium-up: "only screen and (min-width : 40em)"; // 768px
+$portrait-up: "only screen and (min-width : 48em)"; // 768px
+$standard-up: "only screen and (min-width : 60em)"; // 960px 
+$landscape-up: "only screen and (min-width : 64em)"; // 1024px
+$large-up: "only screen and (min-width : 71.250em)"; // 1140px
+$xlarge-up: "only screen and (min-width : 80em)"; // 1280px
+$xxlarge-up: "only screen and (min-width : 90em)"; // 1440px 

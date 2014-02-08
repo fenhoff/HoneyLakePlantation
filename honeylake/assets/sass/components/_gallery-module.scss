@@ -1,6 +1,7 @@
 .gallery {
 	margin-bottom: 2em;
 	@extend .clearfix;
+	clear: both;
 }
 
 .gallery-slides {
@@ -12,6 +13,14 @@
 		width: 50%;
 		padding-right: 1px;
 		padding-bottom: 1px;
+
+		@media #{$standard-up}{
+			width: 20%;
+		}
+
+		@media #{$large-up}{
+			width: 10%;
+		}
 	}
 }
 
