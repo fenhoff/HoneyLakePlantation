@@ -163,6 +163,8 @@ $logo-name-large: 2.25rem;
 .global-nav {
     display: none;
 
+    ul { margin: 0; }
+
     @media #{$portrait-up} {
         padding: .25em 0 0;
         list-style: none;
