@@ -638,11 +638,11 @@ nav, .overlay-menu ul {
     margin: 0;
     padding: 0; }
 
-.contact-btn, nav a.active {
+.contact-btn, .video-btn, nav a.active {
   border-radius: 3px;
   background-color: #f26522;
   padding: 0.5em 1em; }
-  .contact-btn:hover, nav a.active:hover {
+  .contact-btn:hover, .video-btn:hover, nav a.active:hover {
     color: white;
     background-color: #d04300; }
 
@@ -717,7 +717,7 @@ p {
 Components
 ========================================================================== 
 */
-.contact-btn {
+.contact-btn, .video-btn {
   display: inline-block;
   font-weight: 700;
   color: white;
@@ -1215,11 +1215,14 @@ Slideshow
 ========================================================================== 
 */
 .slideshow-module {
-  position: relative; }
+  position: relative;
+  height: 100%; }
   @media only screen and (min-width: 60em) {
     .slideshow-module.large {
-      height: 60%;
+      height: 67vh;
       overflow: hidden; } }
+  .slideshow-module.showVideo {
+    overflow: visible; }
 
 .headline {
   text-align: center; }
@@ -1278,6 +1281,35 @@ Slideshow
 
 /* 
 ==========================================================================
+Video Overlay
+========================================================================== 
+*/
+.videoOverlay {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: red;
+  z-index: 9; }
+
+.video-close-btn {
+  display: block;
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: white;
+  z-index: 10; }
+
+iframe {
+  border: none; }
+
+/* 
+==========================================================================
 Main Level Page Banners
 ========================================================================== 
 */
@@ -1308,7 +1340,7 @@ Main Level Page Banners
   .page-banner h1, .page-banner h3 {
     color: white;
     margin-bottom: 0; }
-  .page-banner .contact-btn {
+  .page-banner .contact-btn, .page-banner .video-btn {
     margin-top: 2em; }
   .page-banner .dotted, .page-banner .dotted-dark {
     margin-top: 0; }

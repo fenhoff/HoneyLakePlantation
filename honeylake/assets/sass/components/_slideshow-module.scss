@@ -5,13 +5,18 @@ Slideshow
 */
 
 .slideshow-module {
-position: relative;
+	position: relative;
+	height: 100%;
 
 	&.large {
 		@media #{$standard-up}{
-			height: 60%;
+			height: 67vh;
 			overflow: hidden;
 		}
+	}
+
+	&.showVideo {
+		overflow: visible;
 	}
 }
 
@@ -98,8 +103,47 @@ position: relative;
 
 	
 
+/* 
+==========================================================================
+Video Overlay
+========================================================================== 
+*/
 
 
+.videoOverlay {
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+	background-color: red;
+	z-index: 9;
+}
+
+.video-btn {
+	@extend .contact-btn;
+}
+
+.video-close-btn {
+
+	display: block;
+	position: absolute;
+	right: 5%;
+	top: 3%;
+	// height: 4em;
+	// width: 4em;
+	padding: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 5px;
+	color: white;
+	z-index:10;
+
+}
+
+iframe {
+	border: none;
+}
 
 
 
