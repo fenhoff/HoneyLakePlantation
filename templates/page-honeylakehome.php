@@ -29,7 +29,7 @@ get_header(); ?>
 		</div> -->
 		<div class="slider">
 			<?php $options = _s_get_theme_options(); ?>
-			<?php $slidermarkup = $options['slideshowid_text_input'] ?>
+			<?php $slidermarkup = $options['slideshowid_text_input']; ?>
 			<?php echo do_shortcode( $slidermarkup ); ?>
 		</div>
 	
@@ -55,6 +55,6 @@ get_header(); ?>
 				</li>
 		<?php endwhile; // end of the loop. ?>
 	</ul>	
-		</div>
+</div>
 <?php get_footer(); ?>
 	
