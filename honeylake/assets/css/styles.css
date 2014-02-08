@@ -1,5 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Cardo);
+@import url("http://fonts.googleapis.com/css?family=Cardo:400,400italic");
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900,300italic,400italic,900italic);
+/* 
+==========================================================================
+Define Global Variables
+========================================================================== 
+*/
 /* 
 ==========================================================================
 Import Components
@@ -125,7 +130,7 @@ h2 {
   font-size: 1.5em;
   margin: 0.83em 0; }
 
-h3 {
+h3, .subnav ul li .subnav-page {
   font-size: 1.17em;
   margin: 1em 0; }
 
@@ -137,7 +142,7 @@ h5 {
   font-size: 0.83em;
   margin: 1.67em 0; }
 
-h6 {
+h6, .subnav ul li .subnav-desc {
   font-size: 0.67em;
   margin: 2.33em 0; }
 
@@ -593,11 +598,10 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .container:before, .branding:before, nav:before, .footer .container:before, .gallery:before,
+.clearfix:before, .container:before, .branding:before, .footer .container:before, .gallery:before,
 .clearfix:after,
 .container:after,
 .branding:after,
-nav:after,
 .footer .container:after,
 .gallery:after {
   content: " ";
@@ -605,21 +609,88 @@ nav:after,
   display: table;
   /* 2 */ }
 
-.clearfix:after, .container:after, .branding:after, nav:after, .footer .container:after, .gallery:after {
+.clearfix:after, .container:after, .branding:after, .footer .container:after, .gallery:after {
   clear: both; }
 
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix, .container, .branding, nav, .footer .container, .gallery {
+.clearfix, .container, .branding, .footer .container, .gallery {
   *zoom: 1; }
+
+/* Overall site wrapper */
+/* 
+==========================================================================
+Home page styles
+========================================================================== 
+*/
+.home-banner.wrapper {
+  padding: 0;
+  position: relative; }
+
+.home-intro {
+  padding: 1em 0;
+  text-align: center; }
+
+.home-intro h1 {
+  font-size: 1.75rem; }
+
+.home-intro h3, .home-intro .subnav ul li .subnav-page, .subnav ul li .home-intro .subnav-page {
+  display: none;
+  font-style: italic;
+  font-weight: 400; }
+
+.arrow-container {
+  width: 10%; }
+
+.arrow.right {
+  float: right;
+  margin-right: 0; }
+
+.slideshow {
+  position: relative;
+  height: auto; }
+
+/* Hold Feature Banner Image | Acts as container for rotation */
+.feature-image {
+  top: 0; }
+
+a.arrow {
+  display: inline-block;
+  border-radius: 5em;
+  border: solid 1px white;
+  color: #fff;
+  width: 1.6em;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-align: center;
+  margin-right: 1em; }
+
+a.arrow:hover {
+  background-color: #fff;
+  color: #252525; }
 
 /* 
 ==========================================================================
-Define Global Variables
+Grid Properties
 ========================================================================== 
 */
+.main,
+aside,
+.gallery {
+  margin: 0 1% 0 0;
+  float: left;
+  display: block; }
+
+.main, aside, .gallery {
+  width: 100%;
+  margin: 0; }
+
+aside {
+  margin-right: 0;
+  float: right; }
+
 /* 
 ==========================================================================
 Animate properties
@@ -627,47 +698,30 @@ Animate properties
 */
 /* 
 ==========================================================================
-Misc
-========================================================================== 
-*/
-nav, .overlay-menu {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  nav li, .overlay-menu li {
-    margin: 0;
-    padding: 0; }
-
-.contact-btn, nav a.active {
-  border-radius: 3px;
-  background-color: #f26522;
-  padding: 0.5em 1em; }
-  .contact-btn:hover, nav a.active:hover {
-    color: white;
-    background-color: #d04300; }
-
-/* 
-==========================================================================
 Typography
 ========================================================================== 
 */
-/* Cardo font: Google Web font */
+/* Marion Font: Licensed */
+/* Cardo Font */
 /* Source Sans font: Google Web font */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px; }
+  font-family: 'Source Sans Pro', sans-serif; }
 
-/* 
-==========================================================================
-Links
-========================================================================== 
-*/
 a {
   color: #f26522;
   text-decoration: none;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  transition-property: all;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: easein;
+  -moz-transition-timing-function: easein;
+  transition-timing-function: easein;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  transition-property: background-color;
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -678,45 +732,49 @@ a {
 a:hover {
   color: #dc4700; }
 
-/* 
-==========================================================================
-Headings
-========================================================================== 
-*/
-h1, h2, h3 {
+h1, h2 {
   font-family: 'Cardo', serif;
   font-weight: normal; }
 
 h1 {
-  font-size: 2.25em;
+  line-height: 4rem; }
+
+h2 {
+  line-height: 2.65rem; }
+
+h3, .subnav ul li .subnav-page, h4, h5 {
+  line-height: 2rem; }
+
+h1 {
+  font-size: 2.25rem;
   line-height: 1.25em; }
 
 h2 {
-  font-size: 2.2em; }
+  font-size: 2.2rem; }
 
-h3 {
-  font-size: 1.6em;
-  font-weight: 300;
-  line-height: 1.5em; }
+h3, .subnav ul li .subnav-page {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400; }
 
 h4 {
-  font-size: 1.15em;
+  font-size: 1.15rem;
   font-weight: 700; }
 
-h6 {
-  font-size: 1em;
+h6, .subnav ul li .subnav-desc {
+  font-size: 1rem;
   font-weight: 900;
+  line-height: 1.5rem;
   margin: 1em 0 0.5em; }
 
-p {
-  font-size: 1em;
-  line-height: 1.5em; }
+.contact-btn, nav a.active {
+  border-radius: 3px;
+  background-color: #f26522;
+  padding: 0.5em 1em; }
+  .contact-btn:hover, nav a.active:hover {
+    color: white;
+    background-color: #d04300; }
 
-/* 
-==========================================================================
-Components
-========================================================================== 
-*/
 .contact-btn {
   display: inline-block;
   font-weight: 700;
@@ -739,67 +797,60 @@ Components
 .dotted-dark {
   color: #848484; }
 
+small {
+  opacity: 0.6; }
+
 /* 
 ==========================================================================
-Layout of Templates
-
-- Global
-- Basic
-- Main Level
-- Second Level
-
+Layout of Pages
 ========================================================================== 
 */
-/* 
-==========================================================================
-Global
-========================================================================== 
-*/
+/* In-page container */
 .container {
   margin: 0 auto;
   padding: 0 10%; }
 
-@media only screen and (min-width: 60em) {
-  .banner {
-    margin-top: -1.25em; } }
-@media only screen and (min-width: 71.25em) {
-  .banner {
-    margin-top: 0; } }
-
 .main {
-  width: 100%; }
-  @media only screen and (min-width: 60em) {
-    .main {
-      width: 60%;
-      margin-right: 5%;
-      float: left; } }
-  @media only screen and (min-width: 71.25em) {
-    .main {
-      width: 65%; } }
+  margin-bottom: 2em; }
+
+.inset-box {
+  background-color: #fafafa;
+  padding: 0.25em; }
+
+.form {
+  width: 100%;
+  float: left;
+  margin-right: 8%; }
 
 aside {
-  width: 75%;
-  margin-top: 2.5em;
-  padding: 2em 2em 3em; }
-  aside.callout {
-    background-color: #f6eddf; }
-  aside.map-wrap {
-    padding: 0.5em; }
-  @media only screen and (min-width: 60em) {
-    aside {
-      width: 35%;
-      float: left; } }
-  @media only screen and (min-width: 71.25em) {
-    aside {
-      width: 30%; } }
-  .page-home aside {
-    display: none; }
+  padding: 0 2em 2em; }
 
-/* 
-==========================================================================
-Main Level
-========================================================================== 
-*/
+.callout {
+  background-color: #f6eddf; }
+
+.gallery {
+  margin-top: 1em; }
+
+address h6, address .subnav ul li .subnav-desc, .subnav ul li address .subnav-desc {
+  font-style: normal; }
+
+address p, address h6, address .subnav ul li .subnav-desc, .subnav ul li address .subnav-desc {
+  margin-top: 0; }
+
+.map-wrap {
+  width: 100%;
+  padding: 0.5em; }
+
+iframe.map {
+  border: solid 5px #d8d8d8; }
+
+.mfp-content figcaption {
+  display: none; }
+
+#packages {
+  display: block;
+  margin-bottom: 8.5em; }
+
 .package-prices {
   margin: 1em 0; }
   .package-prices tr {
@@ -810,104 +861,49 @@ Main Level
 
 /* 
 ==========================================================================
-Second Level
-========================================================================== 
-*/
-/* 
-==========================================================================
-Contact Page
-========================================================================== 
-*/
-.inset-box {
-  background-color: #fafafa;
-  padding: 1.5em; }
-
-address h6 {
-  font-style: normal; }
-
-address p, address h6 {
-  margin-top: 0; }
-
-iframe.map {
-  border: solid 5px #d8d8d8; }
-
-.mfp-content figcaption {
-  display: none; }
-
-/* 
-==========================================================================
-Jot Form Customization
-========================================================================== 
-*/
-.form-error-message img {
-  display: none; }
-
-/* 
-==========================================================================
 Header Styles
 ========================================================================== 
 */
 .site-header {
-  border-top: solid 4px #848484;
-  position: relative;
-  z-index: 9999; }
+  border-top: solid 4px #848484; }
 
 .branding {
   padding: 0.5em 0;
   position: relative; }
-  @media only screen and (min-width: 30em) {
+  @media only screen and (min-width: 768px) {
     .branding {
-      width: 70%;
-      margin: 0;
+      width: 100%;
+      height: 10em;
       float: left; } }
-  @media only screen and (min-width: 40em) {
-    .branding {
-      width: 100%; } }
-  @media only screen and (min-width: 60em) {
+  @media only screen and (min-width: 960px) {
     .branding {
       width: 100%;
-      padding-top: 0.5em; } }
-  @media only screen and (min-width: 48em) {
-    .branding {
-      padding-top: 0;
-      width: 90%; } }
-  @media only screen and (min-width: 71.25em) {
-    .branding {
-      width: 100%;
-      margin-top: -2em; } }
+      padding-top: 0.5em;
+      height: 9em; } }
 
 .logo {
   display: block;
   width: 75%;
-  max-width: 11em;
   padding: 1em 0;
   text-align: center;
   margin: 0 auto; }
-  @media only screen and (min-width: 30em) {
+  @media only screen and (min-width: 480px) {
     .logo {
-      width: 60%;
-      margin: 0;
-      float: left; } }
-  @media only screen and (min-width: 40em) {
+      width: 50%; } }
+  @media only screen and (min-width: 640px) {
     .logo {
-      max-width: 30%;
-      padding: 0;
-      position: relative;
-      left: 0;
-      margin: 0; } }
-  @media only screen and (min-width: 48em) {
+      width: 35%;
+      padding: 0; } }
+  @media only screen and (min-width: 768px) {
     .logo {
-      width: 25%;
-      max-width: 13em;
-      padding-top: 0; } }
-  @media only screen and (min-width: 71.25em) {
-    .logo {
-      top: 1em;
-      max-width: 16em;
-      width: 30%; } }
+      max-width: 12em;
+      width: 35%;
+      padding-top: 0;
+      position: absolute; } }
 
 .logo-name {
-  display: none; }
+  display: none;
+  line-height: 40%; }
   .logo-name .logo-main {
     font-variant: small-caps;
     font-size: 2.25rem;
@@ -917,68 +913,46 @@ Header Styles
     color: #999;
     font-size: 1.4625rem;
     letter-spacing: 0.2em; }
-  @media only screen and (min-width: 40em) {
+  @media only screen and (min-width: 768px) {
     .logo-name {
       display: block;
-      position: relative;
-      width: 70%;
-      line-height: 0.6em;
-      float: left;
-      padding: 0 0 0 0.5em;
-      margin: 12% 0 0; }
-      .logo-name .logo-main {
-        font-size: 1.9125rem; }
-      .logo-name .logo-sub {
-        font-size: 1.125rem; } }
-  @media only screen and (min-width: 48em) {
-    .logo-name {
-      margin-top: 9.5%;
-      padding-left: 0.5em;
-      width: 75%; }
+      position: absolute;
+      width: auto;
+      left: 4.5em;
+      padding-top: 0.75em; }
       .logo-name .logo-main {
         font-size: 2.025rem; }
       .logo-name .logo-sub {
-        font-size: 1.0125rem; } }
-  @media only screen and (min-width: 60em) {
+        font-size: 1.125rem; } }
+  @media only screen and (min-width: 960px) {
     .logo-name {
-      width: 60%;
-      margin-top: 2em; }
+      line-height: 0.49em; }
       .logo-name .logo-main {
         font-size: 2.25rem; }
       .logo-name .logo-sub {
-        font-size: 1.2375rem; } }
-  @media only screen and (min-width: 64em) {
+        font-size: 1.4625rem; } }
+  @media only screen and (min-width: 1024px) {
     .logo-name {
-      line-height: 0.8em; }
+      line-height: 0.55em;
+      padding-top: 0.65em; }
       .logo-name .logo-main {
         font-size: 2.5875rem; }
       .logo-name .logo-sub {
         font-size: 1.6875rem; } }
-  @media only screen and (min-width: 71.25em) {
-    .logo-name {
-      width: 65%;
-      margin-top: 3.25em; } }
 
 .orvis-logo-header {
   display: none; }
-  @media only screen and (min-width: 60em) {
+  @media only screen and (min-width: 960px) {
     .orvis-logo-header {
       display: block;
-      float: left;
-      width: 15%;
-      padding: 0 1.75em;
-      margin-top: 4.5em; } }
-  @media only screen and (min-width: 71.25em) {
-    .orvis-logo-header {
-      float: right;
-      width: 10%;
-      padding: 0;
-      margin-top: 7em;
-      max-width: 6em; } }
+      position: absolute;
+      width: 5em;
+      right: 0;
+      bottom: 1em; } }
 
 .global-nav {
   display: none; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 768px) {
     .global-nav {
       padding: .25em 0 0;
       list-style: none;
@@ -998,89 +972,6 @@ Header Styles
         .global-nav a.active {
           color: #252525;
           font-weight: 700; } }
-
-.menu-btn {
-  display: block;
-  padding: 1em 2em;
-  margin: .75em 0;
-  border: solid 1px #f26522;
-  border-radius: 3px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 0.85em; }
-  .menu-btn:hover {
-    background-color: #f26522;
-    color: white; }
-  @media only screen and (min-width: 30em) {
-    .menu-btn {
-      width: 20%;
-      float: left;
-      margin: 7em 0 0;
-      padding: 1em; } }
-  @media only screen and (min-width: 40em) {
-    .menu-btn {
-      width: 100%;
-      clear: both;
-      margin-top: 0;
-      padding: 1em; } }
-  @media only screen and (min-width: 48em) {
-    .menu-btn {
-      clear: none;
-      width: 10%;
-      margin-top: 4em; } }
-  @media only screen and (min-width: 60em) {
-    .menu-btn {
-      width: 8%;
-      margin-top: 5em; } }
-  @media only screen and (min-width: 71.25em) {
-    .menu-btn {
-      display: none; } }
-
-.main-nav {
-  clear: both; }
-  @media only screen and (min-width: 60em) {
-    .main-nav {
-      padding: 0; } }
-
-/* 
-==========================================================================
-Main Navigation
-========================================================================== 
-*/
-nav {
-  display: none;
-  text-align: center;
-  border-top: solid 1px #848484;
-  margin-bottom: 2em; }
-  nav li {
-    border-bottom: solid 1px #848484; }
-  nav a {
-    display: block;
-    color: #848484;
-    font-size: 1.1em;
-    font-weight: 700;
-    padding: 1em; }
-    nav a.active {
-      color: white; }
-    nav a:hover {
-      color: #252525; }
-  @media only screen and (min-width: 71.25em) {
-    nav {
-      display: block;
-      margin-bottom: 0; }
-      nav li {
-        margin: 1em 1%;
-        border-bottom: none;
-        display: inline-block; }
-      nav li a {
-        padding: 0.5em;
-        font-size: 0.9em; } }
-  @media only screen and (min-width: 80em) {
-    nav li {
-      margin: 0.5em 1.25%; }
-      nav li a {
-        font-size: 1.1em; } }
 
 /* 
 ==========================================================================
@@ -1166,21 +1057,216 @@ Footer Styles
       height: 19px;
       width: 22px; }
       .footer-right .social-links a:hover {
-        background-position: bottom; }
+        background-position-y: bottom; }
       .footer-right .social-links a.social-pinterest {
-        background-position: -48px top; }
-        .footer-right .social-links a.social-pinterest:hover {
-          background-position: -48px bottom; }
+        background-position-x: -48px; }
       .footer-right .social-links a.social-facebook {
-        background-position: -94px top; }
-        .footer-right .social-links a.social-facebook:hover {
-          background-position: -94px bottom; }
+        background-position-x: -94px; }
     .footer-right .social-links span {
       display: none; }
 
+/* 
+==========================================================================
+Main Navigation
+========================================================================== 
+*/
+nav {
+  display: none;
+  margin-bottom: 1em;
+  list-style: none;
+  text-align: center; }
+  nav li {
+    padding: 0.25em 0;
+    border-bottom: solid 1px #848484; }
+  nav a {
+    display: block;
+    padding: 1em;
+    font-weight: 700;
+    color: #848484; }
+    nav a.active {
+      color: white;
+      padding: 1em; }
+    nav a:hover {
+      color: #252525; }
+  @media only screen and (min-width: 960px) {
+    nav {
+      display: block;
+      border-top: solid 1px #848484;
+      padding: 0.25em 0;
+      margin-bottom: 0.5em; }
+      nav li {
+        display: inline-block;
+        margin: 0 1%;
+        border-bottom: none; }
+        nav li a {
+          padding: 0.5em;
+          font-size: 0.8em; }
+          nav li a.active {
+            padding: 0.5em; } }
+  @media only screen and (min-width: 1280px) {
+    nav li {
+      margin: 0 1.25%; }
+      nav li a {
+        font-size: 1em; } }
+  @media only screen and (min-width: 1440px) {
+    nav li {
+      margin: 0 2%; } }
+
+.menu-btn {
+  display: block;
+  padding: 1em 2em;
+  margin: .75em 0;
+  border: solid 1px #f26522;
+  border-radius: 3px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase; }
+  .menu-btn:hover {
+    background-color: #f26522;
+    color: white; }
+  @media only screen and (min-width: 960px) {
+    .menu-btn {
+      display: none; } }
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.35); }
+
+/* 
+==========================================================================
+In Page Sub Navigation for main level pages
+========================================================================== 
+*/
+.subnav {
+  margin-bottom: 4em; }
+
+.subnav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 0.5em 0; }
+  .subnav ul li {
+    display: inline-block;
+    border-right: solid 1px #d9d9d9;
+    margin: 0; }
+    .subnav ul li:last-of-type {
+      border-right: none; }
+    .subnav ul li a {
+      display: block;
+      padding: 1em 8%;
+      text-align: center; }
+      .subnav ul li a:hover {
+        background-color: #f26522; }
+        .subnav ul li a:hover span {
+          color: white; }
+    .subnav ul li span {
+      display: block; }
+    .subnav ul li .subnav-page {
+      margin: 0; }
+    .subnav ul li .subnav-desc {
+      color: #252525;
+      margin: 0.5em 0 0.25em; }
+
+.home-menu {
+  position: relative;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  z-index: 1000; }
+  @media only screen and (min-width: 768px) {
+    .home-menu {
+      position: relative;
+      top: -5em; } }
+
+.home-menu li {
+  margin: 0;
+  padding: 0; }
+  .home-menu li:last-of-type .home-menu-item {
+    border-right: none; }
+
+.home-menu-item {
+  display: block;
+  padding: 1em 2em;
+  border-bottom: solid 1px #848484;
+  background-color: #fafafa;
+  color: #252525;
+  font-style: italic;
+  font-size: 1.5rem;
+  overflow: hidden;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: easein;
+  -moz-transition-timing-function: easein;
+  transition-timing-function: easein; }
+  @media only screen and (min-width: 768px) {
+    .home-menu-item {
+      display: block;
+      float: left;
+      width: 25%;
+      background-color: rgba(37, 37, 37, 0.5);
+      color: white;
+      border: none;
+      border-right: solid 1px #848484; }
+      .home-menu-item:hover {
+        color: white;
+        background-color: #f26522; } }
+
+.title {
+  margin: 0;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.5em; }
+
+.desc {
+  display: none;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear; }
+
+.view-btn {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  border: solid 1px white;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: white;
+  width: auto;
+  font-weight: 700; }
+  .view-btn:hover {
+    background-color: white;
+    color: #f26522; }
+
+.home-menu-item.active {
+  background-color: #f26522;
+  color: white; }
+  @media only screen and (min-width: 640px) {
+    .home-menu-item.active {
+      width: 40%; } }
+
+.home-menu-item.active .desc {
+  display: inherit;
+  opacity: 1; }
+
 .gallery {
-  margin-bottom: 2em;
-  clear: both; }
+  margin-bottom: 2em; }
 
 .gallery-slides {
   width: 100%; }
@@ -1189,12 +1275,6 @@ Footer Styles
     width: 50%;
     padding-right: 1px;
     padding-bottom: 1px; }
-    @media only screen and (min-width: 60em) {
-      .gallery-slides a {
-        width: 20%; } }
-    @media only screen and (min-width: 71.25em) {
-      .gallery-slides a {
-        width: 10%; } }
 
 .gallery-arrow {
   display: none;
@@ -1204,78 +1284,6 @@ Footer Styles
   font-size: 2rem;
   border: solid 1px #252525;
   border-radius: 30px; }
-
-/* 
-==========================================================================
-Slideshow
-========================================================================== 
-*/
-.slideshow-module {
-  position: relative; }
-  @media only screen and (min-width: 60em) {
-    .slideshow-module.large {
-      height: 60%;
-      overflow: hidden; } }
-
-.headline {
-  text-align: center; }
-  @media only screen and (min-width: 60em) {
-    .headline {
-      position: absolute;
-      z-index: 20;
-      color: white;
-      text-align: left;
-      padding: 2em 30% 2em 15%;
-      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.95)), color-stop(100%, rgba(0, 0, 0, 0)));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
-      /* W3C */ } }
-
-.headline h1 {
-  margin-bottom: 0em; }
-
-.overlay-menu li {
-  border-bottom: solid 1px #848484; }
-@media only screen and (min-width: 60em) {
-  .overlay-menu {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    text-align: center; }
-    .overlay-menu li {
-      display: inline-block;
-      border-bottom: none; } }
-.overlay-menu.sticky {
-  position: fixed; }
-
-.overlay-menu-item {
-  color: #848484;
-  font-size: 1.5em;
-  display: block;
-  padding: 1em; }
-  .overlay-menu-item.active, .overlay-menu-item:hover {
-    background-color: #f26522;
-    color: white; }
-  @media only screen and (min-width: 60em) {
-    .overlay-menu-item {
-      color: #fff;
-      font-weight: 300; } }
-
-@media only screen and (min-width: 60em) {
-  .slider {
-    position: absolute; } }
-
-.arrow-container {
-  width: 10%; }
 
 /* 
 ==========================================================================
@@ -1291,22 +1299,22 @@ Main Level Page Banners
     padding-top: 5%;
     padding-bottom: 6%;
     background-color: rgba(37, 37, 37, 0.4); }
-    @media only screen and (min-width: 40em) {
+    @media only screen and (min-width: 640px) {
       .page-banner .overlay, .page-banner .overlay-sm {
         padding-right: 15%; } }
-    @media only screen and (min-width: 48em) {
+    @media only screen and (min-width: 768px) {
       .page-banner .overlay, .page-banner .overlay-sm {
         padding-right: 20%; } }
-    @media only screen and (min-width: 60em) {
+    @media only screen and (min-width: 960px) {
       .page-banner .overlay, .page-banner .overlay-sm {
         padding-right: 25%; } }
-    @media only screen and (min-width: 64em) {
+    @media only screen and (min-width: 1024px) {
       .page-banner .overlay, .page-banner .overlay-sm {
         padding-right: 30%; } }
-    @media only screen and (min-width: 71.25em) {
+    @media only screen and (min-width: 1280px) {
       .page-banner .overlay, .page-banner .overlay-sm {
         padding-right: 35%; } }
-  .page-banner h1, .page-banner h3 {
+  .page-banner h1, .page-banner h3, .page-banner .subnav ul li .subnav-page, .subnav ul li .page-banner .subnav-page {
     color: white;
     margin-bottom: 0; }
   .page-banner .contact-btn {
@@ -1323,19 +1331,19 @@ Main Level Page Banners
 Basic Layout Headings
 ========================================================================== 
 */
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 640px) {
   .intro {
     padding-right: 15%; } }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   .intro {
     padding-right: 20%; } }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 960px) {
   .intro {
     padding-right: 25%; } }
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 1024px) {
   .intro {
     padding-right: 30%; } }
-@media only screen and (min-width: 71.25em) {
+@media only screen and (min-width: 1280px) {
   .intro {
     padding-right: 35%; } }
 
@@ -1371,6 +1379,117 @@ Banner Background Images: id on .page-banner
 #page-banner-leisure {
   background-image: url("../img/banner-leisure.jpg"); }
 
+.form-error-message img {
+  display: none; }
+
+/* 
+==========================================================================
+Font Icons
+========================================================================== 
+*/
+@font-face {
+  font-family: 'entypo';
+  src: url("../icons/entypo.eot");
+  src: url("../icons/entypo.eot?#iefix") format("embedded-opentype"), url("../icons/entypo.woff") format("woff"), url("../icons/entypo.ttf") format("truetype"); }
+
+[class*="icon-"]:before {
+  height: inherit;
+  font-family: 'entypo', sans-serif;
+  font-style: normal;
+  color: inherit; }
+
+.icon-chevron-thin-right:before {
+  content: "\E766"; }
+
+.icon-chevron-thin-left:before {
+  content: "\E765"; }
+
+.icon-circled-cross:before {
+  content: "\E2716"; }
+
+/* 
+==========================================================================
+MEDIA QUERIES
+========================================================================== 
+*/
+@media only screen and (min-width: 40em) {
+  h1 {
+    font-size: 3rem; }
+
+  .gallery a {
+    width: 20%; }
+
+  .main {
+    width: 57.5%; }
+
+  aside {
+    width: 32%; }
+
+  .map-wrap {
+    width: 100%; }
+
+  .form {
+    width: 100%; }
+
+  .inset-box {
+    padding: 1.5em; } }
+@media only screen and (min-width: 49em) {
+  .map-wrap {
+    width: 41%;
+    padding: 0.5em; }
+
+  .form {
+    width: 50%;
+    margin-right: 4%; }
+
+  .gallery a {
+    width: 15%; }
+
+  .home-intro {
+    position: absolute;
+    z-index: 20;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.85)), color-stop(100%, rgba(0, 0, 0, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    /* W3C */ }
+
+  .home-intro h1 {
+    margin-bottom: 0em;
+    font-size: 2.25rem; }
+
+  .slideshow-inner {
+    height: 40em; } }
+@media only screen and (min-width: 65em) {
+  .form {
+    width: 50%;
+    margin-right: 3%; }
+
+  .map-wrap {
+    width: 45%; }
+
+  .home-intro {
+    text-align: left; }
+    .home-intro h1 {
+      font-size: 3rem; }
+    .home-intro h3, .home-intro .subnav ul li .subnav-page, .subnav ul li .home-intro .subnav-page {
+      font-size: 1.25rem;
+      margin-top: 0.5em;
+      display: inherit; } }
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
@@ -1422,10 +1541,12 @@ Banner Background Images: id on .page-banner
 
   p,
   h2,
-  h3 {
+  h3,
+  .subnav ul li .subnav-page {
     orphans: 3;
     widows: 3; }
 
   h2,
-  h3 {
+  h3,
+  .subnav ul li .subnav-page {
     page-break-after: avoid; } }

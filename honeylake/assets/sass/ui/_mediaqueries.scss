@@ -1,0 +1,212 @@
+/* 
+==========================================================================
+MEDIA QUERIES
+========================================================================== 
+*/
+
+@media only screen and (min-width: 40em) {
+    
+    h1 {
+        font-size: 3rem;
+    }
+
+    .gallery a {
+        width: 20%;
+    }
+
+    .main {
+        width: 57.5%;
+    }
+
+    aside {
+        width: 32%;
+    }
+
+    .map-wrap {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .inset-box {
+        padding: 1.5em;
+    }
+
+    .footer {
+        text-align: left;
+    }
+
+    .footer-links {
+        float: right;
+    }
+        .footer-links li {
+            display: inline-block;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            margin: 0 .5em;
+        }
+
+    .legal a {
+        margin: 0 1em 0 0;
+    }
+}
+
+@media only screen and (min-width: 49em) {
+
+    .map-wrap {
+        width: 41%;
+        padding: 0.5em;
+    }
+
+    .form {
+        width: 50%;
+        margin-right: 4%;
+    }
+
+    .footer {
+        background-position: 50% 25%;
+    }
+
+    .gallery a {
+        width: 15%;
+    }
+    
+    .home-intro {
+        position: absolute;
+        z-index: 20;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        color: white;
+        width: 100%;
+        text-align: center;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.85)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+        background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    }
+
+        .home-intro h1 {
+            margin-bottom: 0em;
+            font-size: 2.25rem;
+        }
+        
+
+    
+    .slideshow-inner {
+        height: 40em;
+    }
+}
+
+@media only screen and (min-width: 65em) {
+     .form {
+        width: 50%;
+        margin-right: 3%;
+    }
+
+    .map-wrap {
+        width: 45%;
+    }
+
+    .home-intro {
+        text-align: left;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 0.5em;
+            display: inherit;
+        }
+    }
+}
+
+@media only screen and (min-width: 75em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

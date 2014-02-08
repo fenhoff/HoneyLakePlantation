@@ -1,0 +1,109 @@
+/* 
+==========================================================================
+Header Styles
+========================================================================== 
+*/
+
+.site-header {
+    border-top: solid 4px $gray;  
+}
+
+
+.branding {
+    padding: 0.5em 0;
+    @extend .clearfix;
+
+    @media #{$portrait-up}{
+        float: left;
+        width: 60%;
+    }
+
+    @media #{$standard-up}{
+        width: 100%;
+        padding-top: 0;
+    }
+}
+
+.logo {
+    display: block;
+    width: 75%;
+    padding: 1em 0;
+    text-align: center;
+    margin: 0 auto;
+
+    @media #{$small-up}{
+        width: 50%;
+    }
+
+    @media #{$medium-up}{
+        width: 35%;
+        padding: 0;
+        display: inline-block;
+    }
+
+    @media #{$portrait-up}{
+        max-width: 12em;
+        width: 35%;
+        padding-top: 0;
+    }
+}
+    .logo-name {
+        display: none;
+
+        @media #{$medium-up}{
+            display: inline-block;
+            font-size: 1.5rem;
+            width: 63%;
+            vertical-align: middle;
+            padding-left: 2%;
+            padding-top: 8%;
+            
+        }
+        @media #{$portrait-up}{
+            width: 60%;
+            padding-left: 2%;
+            padding-top: 5%;
+        }
+        @media #{$standard-up}{
+            margin-top: 0;
+            font-size: 2rem;
+            padding-top: 7%;
+
+        }
+    }
+
+
+.global-nav {
+    display: none;
+
+    @media #{$portrait-up} {
+        padding: .25em 0 0;
+        list-style: none;
+        margin: 0;
+        text-align: right;
+        display: block;
+        float: right;
+
+        li {
+            display: inline-block;
+            padding: 0 .5em;
+        }
+
+        a {
+            text-transform: uppercase;
+            font-size: 0.75em;
+            color: $gray;
+            
+            &:hover {
+                color: $charcoal;    
+            }
+
+            &.active {
+                color: $charcoal;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+    
