@@ -1,0 +1,166 @@
+/* 
+==========================================================================
+Layout of Templates
+
+- Global
+- Basic
+- Main Level
+- Second Level
+
+========================================================================== 
+*/
+
+
+/* 
+==========================================================================
+Global
+========================================================================== 
+*/
+
+.container {
+    margin: 0 auto;
+    padding: 0 10%;
+    @extend .clearfix;
+    // max-width: 1600px;
+}
+
+
+// Move up the banner so the logo drops over it.
+.banner {
+    @media #{$standard-up}{
+        margin-top: -1.25em;
+    }
+
+    @media #{$large-up}{
+        margin-top: 0;
+    }
+}
+
+
+.main {
+    width: 100%;
+
+    @media #{$standard-up}{
+        width: 60%;
+        margin-right: 5%;
+        float: left;
+    }
+
+    @media #{$large-up}{
+        width: 65%;
+    }
+}
+
+
+aside {
+    width: 75%;
+    margin-top: 2.5em;
+    padding: 2em 2em 3em;
+
+    &.callout {
+        background-color: $beige;
+    }
+
+    &.map-wrap {
+        padding: 0.5em;
+    }
+
+
+    @media #{$standard-up}{
+        width: 35%;
+        float: left;
+    }
+
+    @media #{$large-up}{
+        width: 30%;
+    }
+
+    .page-home & {
+        display: none;
+    }
+}
+
+
+
+
+
+/* 
+==========================================================================
+Main Level
+========================================================================== 
+*/
+
+
+.package-prices {
+
+    margin: 1em 0;
+
+    tr { 
+        border-bottom: solid 1px rgba($gray, 0.15); 
+    }
+
+    td { 
+        padding: 0.5em; 
+        padding-right: 1em;
+    }
+}
+
+
+
+
+
+/* 
+==========================================================================
+Second Level
+========================================================================== 
+*/
+
+
+
+
+
+/* 
+==========================================================================
+Contact Page
+========================================================================== 
+*/
+
+
+
+.inset-box {
+    background-color: #fafafa;
+    padding: 1.5em;
+}
+
+
+
+address h6 {
+    font-style: normal;
+}
+address p, address h6 {
+    margin-top: 0;
+}
+
+
+iframe.map {
+    border:solid 5px $light-gray - #222;
+}
+
+
+.mfp-content figcaption {
+	display: none;
+}
+
+
+
+
+/* 
+==========================================================================
+Jot Form Customization
+========================================================================== 
+*/
+
+.form-error-message img {
+	display: none;
+}
+
