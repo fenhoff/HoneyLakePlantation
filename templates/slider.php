@@ -21,11 +21,19 @@
 
 	</div>
 
+	<?php
+    $myExcerpt = get('slider_short_code');
+    $tags = array("<p>", "</p>");
+    $myExcerpt = str_replace($tags, "", $myExcerpt);
+    if($myExcerpt != "")
+    { 
+    ?>
 	<div class="slider">
 		<?php $options = _s_get_theme_options(); ?>
 		<?php $slidermarkup = $options['slideshowid_text_input']; ?>
 		<?php echo do_shortcode( $slidermarkup ); ?>
 	</div>
+	<?php } ?>
 
 	<div class="overlay-menu">
 		<?php
