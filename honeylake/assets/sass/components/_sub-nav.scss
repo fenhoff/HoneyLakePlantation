@@ -40,6 +40,8 @@
             }
         }
 
+
+
 .title {
     margin: 0;
     font-style: italic;
@@ -69,18 +71,21 @@
     }
 }
 
-.home-menu-item.active {
-    background-color: #f26522;
+
+
+
+.current-page-item {
+    //@extend .overlay-menu-item;
     color: white;
-
-    @media #{$medium-up}{
-        width: 40%;
-    }
-
+    background-color: $orange;
 }
 
-.home-menu-item.active .desc {
-    display: inherit;        
-    opacity: 1;
-}
+
+
+
+
+
+
+
+
 
