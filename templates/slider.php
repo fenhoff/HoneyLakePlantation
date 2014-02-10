@@ -29,9 +29,7 @@
     { 
     ?>
 	<div class="slider">
-		<?php $options = _s_get_theme_options(); ?>
-		<?php $slidermarkup = $options['slideshowid_text_input']; ?>
-		<?php echo do_shortcode( $slidermarkup ); ?>
+		<?php echo do_shortcode( $myExcerpt ); ?>
 	</div>
 	<?php } ?>
 
