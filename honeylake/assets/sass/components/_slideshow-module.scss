@@ -7,6 +7,9 @@ Slideshow
 .slideshow-module {
 	position: relative;
 	height: 100%;
+	z-index: 10;
+
+	@include animate(height, 200ms, easein);
 
 	&.large {
 		@media #{$standard-up}{
@@ -17,6 +20,7 @@ Slideshow
 
 	&.showVideo {
 		overflow: visible;
+		height: auto;
 	}
 }
 
@@ -50,6 +54,7 @@ Slideshow
 
 	// Menu Placement
 	.overlay-menu {
+		z-index: 40;
 
 		ul {
 			@extend %reset-list;
@@ -117,8 +122,8 @@ Video Overlay
 	position: relative;
 	left: 0;
 	top: 0;
-	background-color: red;
-	z-index: 9;
+	background-color: black;
+	z-index: 50;
 }
 
 .video-btn {
@@ -129,15 +134,21 @@ Video Overlay
 
 	display: block;
 	position: absolute;
-	right: 5%;
-	top: 3%;
+	right: 4%;
+	top: 2%;
 	// height: 4em;
 	// width: 4em;
 	padding: 1em;
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 5px;
+	border: solid 1px rgba(255, 255, 255, 0.4);
 	color: white;
 	z-index:10;
+
+	&:hover {
+		background-color: white;
+		color: black;
+	}
 
 }
 
@@ -145,6 +156,10 @@ iframe {
 	border: none;
 }
 
+.vid-container {
+	max-width: 80%;
+	margin: 0 auto;
+}
 
 
 
