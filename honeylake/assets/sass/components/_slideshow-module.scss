@@ -68,7 +68,6 @@ Slideshow
 					display: block;
 					padding: 1em;
 					
-					&.current-menu-item,
 					&:hover {
 					    background-color: #f26522;
 					    color: white;
@@ -163,6 +162,20 @@ iframe {
 
 
 
+/* 
+==========================================================================
+Current Page Item
+========================================================================== 
+*/
+
+.current-page-item {
+    background-color: $orange;
+
+    a, 
+    a:hover {
+        color: white;
+    }
+}
 
 
 
