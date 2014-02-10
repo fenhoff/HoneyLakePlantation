@@ -19,11 +19,6 @@ get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php include 'slider.php'; ?>
-         <?php 
-              $parentSlug = basename(get_permalink($post->post_parent));
-              wp_nav_menu( array('menu' => $parentSlug, 'container' => 'div', 
-             'container_class' => 'overlay-menu') ); ?>
-        </div>
         <div class="container">
             <div class="main">
                 <h2><?php echo get('tag_line'); ?></h2>

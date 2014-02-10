@@ -20,13 +20,17 @@ get_header();
 
 include 'slider.php';
 
-<<<<<<< HEAD
-get_footer(); ?>
-=======
 	wp_nav_menu( array('menu' => basename(get_permalink()), 'container' => 'div', 
 				 'container_class' => 'overlay-menu') ); ?>
 
+	<div class="videoOverlay">
+		<a href="#" class="video-close-btn" onclick="return false;">Close</a>
+		<div class="vid-container">
+	        <iframe src="http://player.vimeo.com/video/81975933?title=0&byline=0&portrait=0&color=ffffff"
+	           width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+	       </iframe>
+	   </div>
+	</div>
 	</div>
 <?php get_footer(); ?>
->>>>>>> 3f36ea91779f9f3ca0fefed8edc007c061de3718
 	

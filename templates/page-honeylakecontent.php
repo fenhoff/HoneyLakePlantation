@@ -19,13 +19,6 @@ get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php include 'slider.php'; ?>
-<<<<<<< HEAD
-	    
-=======
-	       <?php wp_nav_menu( array('menu' => basename(get_permalink()), 'container' => 'div', 
-                         'container_class' => 'overlay-menu') ); ?>
-        </div>  
->>>>>>> 3f36ea91779f9f3ca0fefed8edc007c061de3718
         <div class="container">
             <div class="main">
                 <h2><?php echo get('tag_line'); ?></h2>
@@ -33,13 +26,6 @@ get_header(); ?>
                 $myExcerpt = get('vimeo_url');
                 $tags = array("<p>", "</p>");
                 $myExcerpt = str_replace($tags, "", $myExcerpt);
-<<<<<<< HEAD
-                ?>
-                <div class="vid-container">
-                    <iframe src="//player.vimeo.com/video/<?php echo $myExcerpt; ?>?title=0&byline=0&portrait=0&color=ffffff"
-                       width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                   </div>
-=======
 
                 if($myExcerpt != "")
                 { 
@@ -51,7 +37,6 @@ get_header(); ?>
                    </div>
                 <?php } ?>
 
->>>>>>> 3f36ea91779f9f3ca0fefed8edc007c061de3718
                    <h4><?php echo get('italic_content'); ?></h4>
                    <p><?php the_content(); ?></p>
                    <a href="/contact" class="contact-btn">Contact Us</a>
