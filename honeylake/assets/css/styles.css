@@ -1334,10 +1334,13 @@ iframe {
 Current Page Item
 ========================================================================== 
 */
-.current-page-item {
+.current-page-item,
+.current_page_item {
   background-color: #f26522; }
   .current-page-item a,
-  .current-page-item a:hover {
+  .current-page-item a:hover,
+  .current_page_item a,
+  .current_page_item a:hover {
     color: white; }
 
 /* 
