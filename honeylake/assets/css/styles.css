@@ -1182,6 +1182,89 @@ Footer Styles
     .footer-right .social-links span {
       display: none; }
 
+.overlay-menu {
+  position: relative;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  z-index: 1000;
+  bottom: 0; }
+
+.overlay-menu li {
+  margin: 0;
+  padding: 0; }
+
+.overlay-menu-item {
+  display: block;
+  padding: 1em 2em;
+  border-bottom: solid 1px #848484;
+  background-color: #fafafa;
+  color: #252525;
+  font-style: italic;
+  font-size: 1.5em;
+  overflow: hidden;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: easein;
+  -moz-transition-timing-function: easein;
+  transition-timing-function: easein; }
+  @media only screen and (min-width: 48em) {
+    .overlay-menu-item {
+      display: block;
+      float: left;
+      width: 25%;
+      background-color: rgba(37, 37, 37, 0.5);
+      color: white;
+      border: none;
+      border-right: solid 1px #848484; }
+      .overlay-menu-item:hover {
+        color: white;
+        background-color: #f26522; } }
+
+.title {
+  margin: 0;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.5em; }
+
+.desc {
+  display: none;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear; }
+
+.view-btn {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  border: solid 1px white;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: white;
+  width: auto;
+  font-weight: 700; }
+  .view-btn:hover {
+    background-color: white;
+    color: #f26522; }
+
+.current-page-item {
+  color: white;
+  background-color: #f26522; }
+  .current-page-item a,
+  .current-page-item a:hover {
+    color: inherit; }
+
 .gallery {
   margin-bottom: 2em;
   clear: both; }
