@@ -1268,6 +1268,9 @@ Slideshow
 .headline h1 {
   margin-bottom: 0em; }
 
+@media only screen and (min-width: 60em) {
+  .overlay-menu {
+    position: initial; } }
 .overlay-menu ul li {
   border-bottom: solid 1px #848484; }
   .overlay-menu ul li a {
@@ -1294,9 +1297,6 @@ Slideshow
     .overlay-menu ul li {
       display: inline-block;
       border-bottom: none; } }
-@media only screen and (min-width: 60em) {
-  .overlay-menu ul {
-    position: initial; } }
 .overlay-menu.sticky {
   position: fixed; }
 
