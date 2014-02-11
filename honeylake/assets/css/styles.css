@@ -1294,6 +1294,9 @@ Slideshow
     .overlay-menu ul li {
       display: inline-block;
       border-bottom: none; } }
+@media only screen and (min-width: 60em) {
+  .overlay-menu ul {
+    position: initial; } }
 .overlay-menu.sticky {
   position: fixed; }
 
