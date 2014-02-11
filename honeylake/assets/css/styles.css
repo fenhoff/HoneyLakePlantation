@@ -1255,13 +1255,14 @@ Slideshow
       background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
       /* IE10+ */
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
-      /* W3C */ } }
+      /* W3C */
+      width: 100%; } }
 
 .headline h1 {
   margin-bottom: 0em; }
 
 .overlay-menu {
-  z-index: 40; }
+  z-index: 1000; }
   .overlay-menu ul li {
     border-bottom: solid 1px #848484; }
     .overlay-menu ul li a {
