@@ -1230,7 +1230,14 @@ Slideshow
   @media only screen and (min-width: 60em) {
     .slideshow-module.large {
       height: 67vh;
-      overflow: hidden; } }
+      overflow: hidden; }
+      .slideshow-module.large img {
+        width: auto;
+        height: 100%; } }
+  @media only screen and (min-width: 71.25em) {
+    .slideshow-module.large img {
+      width: 100%;
+      height: auto; } }
   .slideshow-module.showVideo {
     overflow: visible;
     height: auto; }
@@ -1261,37 +1268,33 @@ Slideshow
 .headline h1 {
   margin-bottom: 0em; }
 
-.overlay-menu {
-  z-index: 50;
-  position: absolute;
-  width: 100%;
-  bottom: 0; }
-  .overlay-menu ul li {
-    border-bottom: solid 1px #848484; }
-    .overlay-menu ul li a {
-      color: #848484;
-      font-size: 1.5em;
-      display: block;
-      padding: 1em; }
-      .overlay-menu ul li a:hover {
-        background-color: #f26522;
-        color: white; }
-      @media only screen and (min-width: 60em) {
-        .overlay-menu ul li a {
-          color: #fff;
-          font-weight: 300; } }
-  @media only screen and (min-width: 60em) {
-    .overlay-menu ul {
-      position: absolute;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      width: 100%;
-      text-align: center; }
-      .overlay-menu ul li {
-        display: inline-block;
-        border-bottom: none; } }
-  .overlay-menu.sticky {
-    position: fixed; }
+.overlay-menu ul li {
+  border-bottom: solid 1px #848484; }
+  .overlay-menu ul li a {
+    color: #848484;
+    font-size: 1.5em;
+    display: block;
+    padding: 1em; }
+    .overlay-menu ul li a:hover {
+      background-color: #f26522;
+      color: white; }
+    @media only screen and (min-width: 60em) {
+      .overlay-menu ul li a {
+        color: #fff;
+        font-weight: 300; } }
+@media only screen and (min-width: 60em) {
+  .overlay-menu ul {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    z-index: 999; }
+    .overlay-menu ul li {
+      display: inline-block;
+      border-bottom: none; } }
+.overlay-menu.sticky {
+  position: fixed; }
 
 .arrow-container {
   width: 10%; }
