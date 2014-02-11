@@ -1272,7 +1272,7 @@ Slideshow
   border-bottom: solid 1px #848484; }
   .overlay-menu ul li a {
     color: #848484;
-    font-size: 1.5em;
+    font-size: 1.25em;
     display: block;
     padding: 1em; }
     .overlay-menu ul li a:hover {
@@ -1281,8 +1281,9 @@ Slideshow
     @media only screen and (min-width: 60em) {
       .overlay-menu ul li a {
         color: #fff;
-        font-weight: 300; } }
-@media only screen and (min-width: 60em) {
+        font-weight: 300;
+        font-size: 1.5em; } }
+@media only screen and (min-width: 40em) {
   .overlay-menu ul {
     position: absolute;
     bottom: 0;
