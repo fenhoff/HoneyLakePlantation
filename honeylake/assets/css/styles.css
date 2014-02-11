@@ -1277,6 +1277,9 @@ Slideshow
       font-size: 1.25em;
       display: block;
       padding: 1em; }
+      @media only screen and (min-width: 40em) {
+        .overlay-menu ul li a {
+          color: white; } }
       .overlay-menu ul li a:hover {
         background-color: #f26522;
         color: white; }
