@@ -45,5 +45,5 @@ jQuery(".video-close-btn").click(function() {
 
 jQuery(".menu-btn").click(function() {
 	console.log("Menu Hit");
-	$("nav").slideToggle("fast");
+	jQuery("nav").slideToggle("fast");
 });
