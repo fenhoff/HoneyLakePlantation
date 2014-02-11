@@ -1268,37 +1268,36 @@ Slideshow
 .headline h1 {
   margin-bottom: 0em; }
 
-@media only screen and (min-width: 60em) {
-  .overlay-menu {
-    position: initial; } }
-.overlay-menu ul li {
-  border-bottom: solid 1px #848484; }
-  .overlay-menu ul li a {
-    color: #848484;
-    font-size: 1.25em;
-    display: block;
-    padding: 1em; }
-    .overlay-menu ul li a:hover {
-      background-color: #f26522;
-      color: white; }
-    @media only screen and (min-width: 60em) {
-      .overlay-menu ul li a {
-        color: #fff;
-        font-weight: 300;
-        font-size: 1.5em; } }
-@media only screen and (min-width: 40em) {
-  .overlay-menu ul {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    text-align: center;
-    z-index: 999; }
-    .overlay-menu ul li {
-      display: inline-block;
-      border-bottom: none; } }
-.overlay-menu.sticky {
-  position: fixed; }
+.overlay-menu {
+  position: relative; }
+  .overlay-menu ul li {
+    border-bottom: solid 1px #848484; }
+    .overlay-menu ul li a {
+      color: #848484;
+      font-size: 1.25em;
+      display: block;
+      padding: 1em; }
+      .overlay-menu ul li a:hover {
+        background-color: #f26522;
+        color: white; }
+      @media only screen and (min-width: 60em) {
+        .overlay-menu ul li a {
+          color: #fff;
+          font-weight: 300;
+          font-size: 1.5em; } }
+  @media only screen and (min-width: 40em) {
+    .overlay-menu ul {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      text-align: center;
+      z-index: 999; }
+      .overlay-menu ul li {
+        display: inline-block;
+        border-bottom: none; } }
+  .overlay-menu.sticky {
+    position: fixed; }
 
 .arrow-container {
   width: 10%; }
