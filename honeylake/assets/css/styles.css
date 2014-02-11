@@ -1262,7 +1262,10 @@ Slideshow
   margin-bottom: 0em; }
 
 .overlay-menu {
-  z-index: 1000; }
+  z-index: 50;
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
   .overlay-menu ul li {
     border-bottom: solid 1px #848484; }
     .overlay-menu ul li a {
