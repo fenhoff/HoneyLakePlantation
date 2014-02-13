@@ -20,26 +20,17 @@ jQuery(function() {
 
 jQuery(".video-btn").click(function() {
 	console.log("Video Hit");
-	jQuery(".slideshow-module").toggleClass("showVideo");
-	jQuery(".overlay-menu").fadeToggle("fast", function() {
-		jQuery(".headline").fadeToggle("fast", function() {
-			jQuery(".slider").fadeToggle("fast", function () {
+	jQuery(".slideshow-module").fadeToggle("fast", function () {
 				jQuery(".videoOverlay").fadeToggle("fast");	
 			});
-		});
-	});
 });
 
 jQuery(".video-close-btn").click(function() {
 	console.log("Close Video");
-	jQuery(".slideshow-module").toggleClass("showVideo");
+
 	jQuery(".videoOverlay").fadeToggle("fast", function () {
-		jQuery(".headline").fadeToggle("fast", function () {
-			jQuery(".slider").fadeToggle("fast", function(){
-				jQuery(".overlay-menu").fadeToggle("fast");
+				jQuery(".slideshow-module").fadeToggle("fast");	
 			});
-		});
-	});
 });
 
 

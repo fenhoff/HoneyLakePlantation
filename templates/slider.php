@@ -33,7 +33,9 @@
 	</div>
 	<?php } ?>
 
-	<div class="overlay-menu">
+	
+</div>  
+<div class="overlay-menu">
 		<?php
 		if($post->post_parent)
 			$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
@@ -45,4 +47,3 @@
 		</ul>
 		<?php } ?>
 	</div>
-</div>  
