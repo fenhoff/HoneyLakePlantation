@@ -29,22 +29,25 @@ include 'slider.php';
 
 	<div class="videoOverlay">
 			
-<?php if (isset($_COOKIE['newvisitor'])) {
+<?php if (isset($_COOKIE['newvisitor'])) { ?>
 
-}else{	?>
-    <script src="https://static-interlogyllc.netdna-ssl.com/static/feedback2.js?3.2.570" type="text/javascript">
-		new JotformFeedback({
-		formId:'40440259074147',
-		base:'https://secure.jotform.us/',
-		windowTitle:'Email PopUp',
-		background:'#FFA500',
-		fontColor:'#FFFFFF',
-		type:false,
-		height:500,
-		width:700,
-		openOnLoad:true
-		});
-	</script>
+
+<script src="https://static-interlogyllc.netdna-ssl.com/static/feedback2.js?3.2.570" type="text/javascript">
+
+new JotformFeedback({
+formId:'40440259074147',
+base:'https://secure.jotform.us/',
+windowTitle:'Email PopUp',
+
+background:'#FFA500',
+fontColor:'#FFFFFF',
+type:false,
+height:500,
+width:700,
+
+openOnLoad:true
+});
+</script>
 <?php } ?>
 
 
