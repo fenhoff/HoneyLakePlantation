@@ -161,6 +161,22 @@ function bones_wpsearch($form) {
 	return $form;
 } // don't remove this bracket!
 
+
+
+/* 
+==========================================================================
+Set Cookie
+========================================================================== 
+*/
+function set_newuser_cookie() {
+    if ( !is_admin() && !isset($_COOKIE['sitename_newvisitor'])) {
+        setcookie('sitename_newvisitor', 1, time()+3600*24*100, COOKIEPATH, COOKIE_DOMAIN, false);
+    }
+}
+add_action( 'init', 'set_newuser_cookie');
+
+
+
 /*****************************************************************
 						THEME OPTIONS
 *****************************************************************/
