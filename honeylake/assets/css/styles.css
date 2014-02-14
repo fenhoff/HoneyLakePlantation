@@ -1086,6 +1086,9 @@ nav {
       nav li a {
         font-size: 1.1em; } }
 
+.menu {
+  padding: 0; }
+
 /* 
 ==========================================================================
 Footer Styles
@@ -1208,6 +1211,9 @@ Footer Styles
   font-size: 2rem;
   border: solid 1px #252525;
   border-radius: 30px; }
+
+.envira-gallery-public .envira-gallery-item img {
+  width: 100%; }
 
 /* 
 ==========================================================================
