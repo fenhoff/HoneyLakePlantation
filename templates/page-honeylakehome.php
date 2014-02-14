@@ -1,4 +1,12 @@
 <?php
+    // Top of the page, before sending out ANY output to the page.
+        $user_is_first_timer = !isset( $_COOKIE["FirstTimer"] );
+
+    // Set the cookie so that the message doesn't show again
+        setcookie( "FirstTimer", 1, strtotime( '+1 year' ) );
+?>
+
+<?php
 
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
@@ -27,7 +35,7 @@ if ( !defined('ABSPATH')) exit;
    $vimeoID = str_replace($tags, "", $vimeoID);
    ?>
 
-   <?php if (isset($_COOKIE['newvisitor'])) { ?>
+   <?php if( $user_is_first_timer ): ?>
 
    <script src="https://static-interlogyllc.netdna-ssl.com/static/feedback2.js?3.2.570" type="text/javascript">
 
@@ -47,7 +55,7 @@ if ( !defined('ABSPATH')) exit;
    
    </script>
 
-   <?php } ?>
+   <?php endif; ?>
 
 
    <div class="videoOverlay">
