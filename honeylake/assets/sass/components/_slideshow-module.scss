@@ -15,6 +15,18 @@ Slideshow
 		@media #{$standard-up}{
 			height: 67vh;
 			overflow: hidden;
+
+			img {
+				width: auto;
+				height: 100%;
+			}
+		}
+
+		@media#{$large-up}{
+			img {
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
 
@@ -42,6 +54,8 @@ Slideshow
 	        background: -o-linear-gradient(top, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
 	        background: -ms-linear-gradient(top, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
 	        background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* W3C */
+
+	        width: 100%;
 		}
     }
 
@@ -54,8 +68,13 @@ Slideshow
 
 	// Menu Placement
 	.overlay-menu {
-		z-index: 40;
+		
+		position: relative;
 
+		// @media #{$standard-up}{
+		// 	position: initial;
+		// }
+	
 		ul {
 			@extend %reset-list;
 
@@ -64,9 +83,13 @@ Slideshow
 
 				a {
 					color: $gray;
-					font-size: 1.5em;
+					font-size: 1.25em;
 					display: block;
 					padding: 1em;
+
+					@media #{$medium-up}{
+						color: white;
+					}
 					
 					&:hover {
 					    background-color: #f26522;
@@ -76,22 +99,25 @@ Slideshow
 					@media #{$standard-up}{
 						color: #fff;
 						font-weight: 300;
+						font-size: 1.5em;
 					}
 				}
 			}	
 
-			@media #{$standard-up}{
+			@media #{$medium-up}{
 				position: absolute;
 				bottom: 0;
 				background-color: rgba(#000, 0.6);
 				width: 100%;
 				text-align: center;
+				z-index: 999;
 
 				li {
 					display: inline-block;
 					border-bottom: none;
 				}
 			}
+
 		}
 
 		&.sticky {
@@ -123,6 +149,11 @@ Video Overlay
 	top: 0;
 	background-color: black;
 	z-index: 50;
+
+	iframe {
+		margin: 0 auto;
+		width: 100%;
+	}
 }
 
 .video-btn {

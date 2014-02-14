@@ -130,15 +130,19 @@ Footer Styles
             &:hover {
                 background-position: bottom;
             }
+        }
 
-            &.social-pinterest { 
-                background-position: -48px top; 
-                &:hover { background-position: -48px bottom; }
-            }
-            &.social-facebook { 
-                background-position: -94px top; 
-                &:hover { background-position: -94px bottom; }
-            }
+        .social-pinterest { 
+            background-position: -48px top; 
+            &:hover { background-position: -48px bottom; }
+        }
+        .social-facebook { 
+            background-position: -94px top; 
+            &:hover { background-position: -94px bottom; }
+        }
+        .social-twitter { 
+            background-position: 0px top; 
+            &:hover { background-position: 0px bottom; }
         }
 
         span { display: none; }
