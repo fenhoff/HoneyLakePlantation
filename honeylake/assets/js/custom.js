@@ -19,17 +19,16 @@ jQuery(function() {
 // Video Overlay - Home page
 
 jQuery(".video-btn").click(function() {
-	console.log("Video Hit");
+  jQuery(".overlay-menu").fadeToggle("fast");
 	jQuery(".slideshow-module").fadeToggle("fast", function () {
-				jQuery(".videoOverlay").fadeToggle("fast");	
+  			jQuery(".videoOverlay").fadeToggle("fast");	
 			});
 });
 
 jQuery(".video-close-btn").click(function() {
-	console.log("Close Video");
-
+  jQuery(".overlay-menu").fadeToggle("fast");
 	jQuery(".videoOverlay").fadeToggle("fast", function () {
-				jQuery(".slideshow-module").fadeToggle("fast");	
+  			jQuery(".slideshow-module").fadeToggle("fast");	
 			});
 });
 

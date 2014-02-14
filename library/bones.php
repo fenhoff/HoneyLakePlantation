@@ -396,4 +396,12 @@ function bones_get_the_author_posts_link() {
 	return $link;
 }
 
+function set_newuser_cookie() {
+    if ( !is_admin() && !isset($_COOKIE['newvisitor'])) {
+        setcookie('newvisitor', 1, time()+3600*24*100, COOKIEPATH, COOKIE_DOMAIN, false);
+    }
+}
+add_action( 'init', 'set_newuser_cookie');
+
+
 ?>
