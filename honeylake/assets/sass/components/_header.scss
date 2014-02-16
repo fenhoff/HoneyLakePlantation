@@ -172,6 +172,8 @@ $logo-name-large: 2.25rem;
         text-align: right;
         display: block;
         float: right;
+        position: relative;
+        z-index: 99;
 
         li {
             display: inline-block;

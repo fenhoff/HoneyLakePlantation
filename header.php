@@ -56,7 +56,11 @@
 					<br>
 					<span class="logo-sub">Resort&nbsp;&&nbsp;Spa</span>
 				</h1>
+<<<<<<< HEAD
 				<a href="orvis" class="orvis-logo-header"  target="_blank">
+=======
+				<a href="http://www.honeylakeplantation.com/orvis/" class="orvis-logo-header">
+>>>>>>> b78ec6a3aca60a68e3678c0f0a6be79dfb33d199
 					<img src="<?php echo get_template_directory_uri() ; ?>/honeylake/assets/img/orvis-endorsed.png" alt="Orvis Endorsed Wingshooting Lodge">
 				</a>
 			</div>

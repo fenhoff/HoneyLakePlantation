@@ -987,7 +987,9 @@ Header Styles
       margin: 0;
       text-align: right;
       display: block;
-      float: right; }
+      float: right;
+      position: relative;
+      z-index: 99; }
       .global-nav li {
         display: inline-block;
         padding: 0 .5em; }
@@ -1174,14 +1176,18 @@ Footer Styles
       width: 22px; }
       .footer-right .social-links a:hover {
         background-position: bottom; }
-      .footer-right .social-links a.social-pinterest {
-        background-position: -48px top; }
-        .footer-right .social-links a.social-pinterest:hover {
-          background-position: -48px bottom; }
-      .footer-right .social-links a.social-facebook {
-        background-position: -94px top; }
-        .footer-right .social-links a.social-facebook:hover {
-          background-position: -94px bottom; }
+    .footer-right .social-links .social-pinterest {
+      background-position: -48px top; }
+      .footer-right .social-links .social-pinterest:hover {
+        background-position: -48px bottom; }
+    .footer-right .social-links .social-facebook {
+      background-position: -94px top; }
+      .footer-right .social-links .social-facebook:hover {
+        background-position: -94px bottom; }
+    .footer-right .social-links .social-twitter {
+      background-position: 0px top; }
+      .footer-right .social-links .social-twitter:hover {
+        background-position: 0px bottom; }
     .footer-right .social-links span {
       display: none; }
 
@@ -1325,6 +1331,9 @@ Video Overlay
   top: 0;
   background-color: black;
   z-index: 50; }
+  .videoOverlay iframe {
+    margin: 0 auto;
+    width: 100%; }
 
 .video-close-btn {
   display: block;
@@ -1346,7 +1355,7 @@ iframe {
 
 .vid-container {
   max-width: 80%;
-  margin: 0; }
+  margin: 0 auto; }
 
 /* 
 ==========================================================================
@@ -1514,3 +1523,5 @@ Banner Background Images: id on .page-banner
   h2,
   h3 {
     page-break-after: avoid; } }
+.TA_selfserveprop img {
+  width: auto !important; }
