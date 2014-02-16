@@ -1523,3 +1523,5 @@ Banner Background Images: id on .page-banner
   h2,
   h3 {
     page-break-after: avoid; } }
+.TA_selfserveprop img {
+  width: auto !important; }
