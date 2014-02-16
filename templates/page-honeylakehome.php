@@ -51,11 +51,6 @@ if ( !defined('ABSPATH')) exit;
     </script>
 <?php endif; ?>
 
-
-
-   
-
-
    <div class="videoOverlay">
 
        	<a href="#" class="video-close-btn" onclick="return false;">Close</a>
@@ -66,6 +61,6 @@ if ( !defined('ABSPATH')) exit;
        	    </iframe>'; ?>
         </div>
     </div>
-    
+
 </div>
 <?php get_footer(); ?>
