@@ -25,7 +25,7 @@
 				<li><a href="#">Terms&nbsp;of&nbsp;Use</a></li>
 				<li><a href="#">Privacy&nbsp;Policy</a></li>
 			</ul>
-			<a href="http://www.orvis.com/endorsedgraphics" target="_blank">
+			<a href="http://www.honeylakeplantation.com/orvis/">
 				<img src="<?php echo get_template_directory_uri() ; ?>/honeylake/assets/img/orvis-endorsed.png" alt="Orvis Endorsed Wingshooting Lodge" class="orvis-logo">
 			</a>
 		</div>
