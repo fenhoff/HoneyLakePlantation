@@ -1,6 +1,6 @@
 <?php
     // Top of the page, before sending out ANY output to the page.
-        $user_is_first_timer = !isset( $_COOKIE["FirstTimer"] );
+        // $user_is_first_timer = !isset( $_COOKIE["FirstTimer"] );
 
     // Set the cookie so that the message doesn't show again
         setcookie( "FirstTimer", 1, strtotime( '+1 year' ) );
