@@ -20,7 +20,7 @@ get_header(); ?>
 <div class="container">
     <div class="intro">
         <h1>Contact Us</h1>
-        <h3>We would love to hear from you. Looking to <a href="http://kurtis1.testwebhotel.microsdc.us/" target="_blank">book a reservation?</a></h3>
+        <h3>We would love to hear from you. Looking to <a href="http://ushlp.webhotel.microsdc.us/" target="_blank">book a reservation?</a></h3>
     </div>
     <div class="main inset-box form">
         <p>Fill out the form below and someone will contact you shortly regarding your request.</p>
